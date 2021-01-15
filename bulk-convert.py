@@ -2,13 +2,13 @@ adm = Avidemux()
 gui = Gui()
 
 # file extension of input files
-input_ext = 'AVI'
+input_ext = 'avi'
 
 # file extension for output files
 output_ext = 'mp4'
 
 def convert_file(input_file, output_folder):
-    output_file = output_folder + '/' + basename(input_file)
+    output_file = output_folder + '/' + basename(input_file).replace(input_ext, output_ext)
 
     adm.loadVideo(input_file)
     
